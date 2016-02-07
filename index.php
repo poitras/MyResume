@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="fr"> <!--<![endif]-->
 <head>
-  <title>Nicolas Resume</title>
+  <title>Nicolas P</title>
   <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,13 +52,13 @@
         <div class="profile-container">
             <img class="profile" src="assets/images/profile.png" alt="" />
             <h1 class="name">Nicolas Poitras-Demange</h1>
-            <h3 class="tagline">Développeur web</h3>
+            <h3 class="tagline"><?php echo $langTab['tagLine'] ?></h3>
         </div><!--//profile-container-->
 
         <div class="contact-container container-block">
             <ul class="list-unstyled contact-list">
                 <li class="email"><i class="fa fa-envelope"></i><a href="mailto: nicopoitras@email.com">nicopoitras@gmail.com</a></li>
-                <li class="phone"><i class="fa fa-phone"></i><a href="tel:514 651 7111">514 651 7111</a></li>
+                <li class="phone"><i class="fa fa-phone"></i>514-651-7111</li>
                 <!-- <li class="website"><i class="fa fa-globe"></i><a href="http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/" target="_blank">portfoliosite.com</a></li> -->
                 <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://ca.linkedin.com/in/nicolaspoitrasdemange" target="_blank">account/Nicolas Poitras</a></li>
                 <li class="github"><i class="fa fa-github"></i><a href="https://github.com/poitras" target="_blank">github.com/poitras</a></li>
@@ -66,33 +66,33 @@
             </ul>
         </div><!--//contact-container-->
         <div class="education-container container-block">
-            <h2 class="container-block-title">Education</h2>
+            <h2 class="container-block-title"><?php echo $langTab['eduTitle'] ?></h2>
             <div class="item">
-                <h4 class="degree">Information technology engineering</h4>
-                <h5 class="meta">École de technologie supérieur (ETS)</h5>
-                <div class="time">2014 - current</div>
+                <h4 class="degree"><?php echo $langTab['eduDegree1'] ?></h4>
+                <h5 class="meta"><?php echo $langTab['eduSchool1'] ?></h5>
+                <div class="time"><?php echo $langTab['eduTime1'] ?></div>
             </div><!--//item-->
             <div class="item">
-                <h4 class="degree">Diploma of college studies in Computer science</h4>
-                <h5 class="meta">Cégep du Vieux Montréal</h5>
-                <div class="time">2010 - 2013</div>
+                <h4 class="degree"><?php echo $langTab['eduDegree2'] ?></h4>
+                <h5 class="meta"><?php echo $langTab['eduSchool2'] ?></h5>
+                <div class="time"><?php echo $langTab['eduTime2'] ?></div>
             </div><!--//item-->
         </div><!--//education-container-->
 
         <div class="languages-container container-block">
-            <h2 class="container-block-title">Languages</h2>
+            <h2 class="container-block-title"><?php echo $langTab['langTitle'] ?></h2>
             <ul class="list-unstyled interests-list">
-                <li>French <span class="lang-desc">(Native)</span></li>
-                <li>English <span class="lang-desc">(Professional)</span></li>
+                <li><?php echo $langTab['lang1'] ?></li>
+                <li><?php echo $langTab['lang2'] ?></li>
             </ul>
         </div><!--//interests-->
 
         <div class="interests-container container-block">
-            <h2 class="container-block-title">Interests</h2>
+            <h2 class="container-block-title"><?php echo $langTab['interestTitle'] ?></h2>
             <ul class="list-unstyled interests-list">
-                <li>Voyage</li>
-                <li>Sport</li>
-                <li>Musique</li>
+                <li><?php echo $langTab['interest1'] ?></li>
+                <li><?php echo $langTab['interest2'] ?></li>
+                <li><?php echo $langTab['interest3'] ?></li>
             </ul>
         </div><!--//interests-->
 
@@ -110,7 +110,7 @@
         </section><!--//section-->
 
         <section class="section experiences-section">
-            <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
+            <h2 class="section-title"><i class="fa fa-briefcase"></i><?php echo $langTab['xpTitle'] ?></h2>
 
             <div class="item">
                 <div class="meta">
@@ -156,9 +156,9 @@
         </section><!--//section-->
 
         <section class="section projects-section">
-            <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
+            <h2 class="section-title"><i class="fa fa-archive"></i><?php echo $langTab['projectsTitle'] ?></h2>
             <div class="intro">
-                <p>You can list your side projects or open source libraries in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.</p>
+                <p><?php echo $langTab['projectsText'] ?></p>
             </div><!--//intro-->
             <div class="item">
                 <span class="project-title"><a href="#hook">Velocity</a></span> - <span class="project-tagline">A responsive website template designed to help startups promote, market and sell their products.</span>
@@ -180,7 +180,7 @@
         </section><!--//section-->
 
         <section class="skills-section section">
-            <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+            <h2 class="section-title"><i class="fa fa-rocket"></i><?php echo $langTab['compTitle'] ?></h2>
             <div class="skillset">
                 <div class="item">
                     <h3 class="level-title">Python &amp; Django</h3>
