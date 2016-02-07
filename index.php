@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Page personnel de Nicolas Poitras">
-  <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+  <meta name="author" content="Xiaoying Riley at 3rd Wave Media and Nicolas Poitas">
   <link rel="shortcut icon" href="favicon.ico">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <!-- Global CSS -->
@@ -27,10 +27,28 @@
 </head>
 
 <body>
+  <?php
+    $lang = htmlspecialchars($_GET['lang']);
+    if (isset($lang)) {
+      switch ($lang) {
+        case 'fr':
+          include 'lang/lang.fr.php';
+          break;
+        case 'en':
+          include 'lang/lang.en.php';
+          break;
+        default:
+          include 'lang/lang.fr.php';
+          break;
+      }
+    }else{
+      include 'lang/lang.fr.php';
+    }
 
+  ?>
   <div class="wrapper">
     <div class="sidebar-wrapper">
-      <p style="float:right;margin:2px"><a href="#" >fr</a>/<a href="en/">en</a></p>
+      <p style="float:right;margin:2px"><a href="index.php?lang=fr" >fr</a>/<a href="index.php?lang=en">en</a></p>
         <div class="profile-container">
             <img class="profile" src="assets/images/profile.png" alt="" />
             <h1 class="name">Nicolas Poitras-Demange</h1>
@@ -83,9 +101,11 @@
     <div class="main-wrapper">
 
         <section class="section summary-section">
-            <h2 class="section-title"><i class="fa fa-user"></i>Profil de carrière</h2>
+            <h2 class="section-title"><i class="fa fa-user"></i><?php echo $langTab['carrerTitle'] ?></h2>
             <div class="summary">
-                <p>Summarise your career here lorem ipsum dolor sit amet, consectetuer adipiscing elit. You can <a href="http://themes.3rdwavemedia.com/website-templates/orbit-free-resume-cv-template-for-developers/" target="_blank">download this free resume/CV template here</a>. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.</p>
+              <p>
+                <?php echo $langTab['carrerText'] ?>
+              </p>
             </div><!--//summary-->
         </section><!--//section-->
 
